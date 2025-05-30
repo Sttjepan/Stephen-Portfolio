@@ -2,17 +2,26 @@
 
 import React, { useEffect } from 'react';
 import Lenis from 'lenis';
-import ProjectHero from '@/app/projects/project/hero';
 import Image from 'next/image';
-import TextGradient from '@/components/animations/textAnimations/textGradient';
 
-export default function pa() {
+export default function Pa() {
+  // locomotive-scroll init
   useEffect(() => {
     (async () => {
       // @ts-ignore
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
-      const locomotiveScroll = new LocomotiveScroll();
+      new LocomotiveScroll();
     })();
+  }, []);
+
+  // lenis smooth scroll
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
   }, []);
 
   const researchImages = [
@@ -23,25 +32,10 @@ export default function pa() {
     '/images/pa/poster3.png',
     '/images/pa/poster4.png'
   ];
-  ``;
-  const description = 'Art';
-  const heroText =
-    'Discover Pixel Art for the game BloodLine True Kings Quest';
-
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
 
   return (
     <div>
-      <div className="h-[20vh] w-full bg-gradient-to-b from-foreground to-background opacity-60"></div>
+      <div className="h-[20vh] w-full bg-gradient-to-b from-foreground to-background opacity-60" />
       {researchImages.map((asset, index) => (
         <Image
           key={index}
@@ -50,7 +44,7 @@ export default function pa() {
           width={700}
           height={500}
           quality={100}
-          layout="responsive"
+          style={{ width: '100%', height: 'auto' }}
         />
       ))}
     </div>
