@@ -6,13 +6,12 @@ import Link from 'next/link';
 
 export default function Description() {
   const phrase1 =
-    'A software engineer with a passion for innovation and\n' +
-    'cutting-edge technology.\n\n ';
+    'Currently enrolled\n' +
+    'schooling.\n\n ';
 
   const phrase2 =
     'Particularly interested in the intersection of art, design, and ' +
-    'software. I believe that these disciplines can be combined to ' +
-    'create truly transformative experiences.';
+    'game creation .';
   const description = useRef(null);
   const isInView = useInView(description);
 
@@ -61,17 +60,17 @@ export default function Description() {
           animate={isInView ? 'open' : 'closed'}
           className="m-0 pb-3 font-light sm:text-lg"
         >
-          Currently the founding full stack software engineer @Catapult a DeFi
-          startup.
+          
+        
         </motion.p>
         <motion.p
           variants={opacity}
           animate={isInView ? 'open' : 'closed'}
           className="m-0 text-lg font-light"
         >
-          My projects have received multiple awards in the past, and I am always
-          looking for new and innovative ways to use my skills to make a
-          positive impact on the world.
+          
+          Looking for new and innovative ways to use my skills to make a
+          positive impact!
         </motion.p>
         <div data-scroll-speed={0.1}>
           <Link href={'/about'}>

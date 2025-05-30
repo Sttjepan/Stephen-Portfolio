@@ -10,7 +10,7 @@ type NavLinksProps = {
 
 export default function NavLinks({ links, setIsActive }: NavLinksProps) {
   return (
-    <div className="flex flex-col gap-2.5">
+    <div className="flex flex-col gap-14">
       {links.map((link, i) => {
         const { title, href } = link;
         return (

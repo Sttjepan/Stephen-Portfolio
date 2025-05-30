@@ -11,10 +11,10 @@ import Magnetic from '@/components/animations/magnetic';
 import Image from 'next/image';
 
 export default function Header() {
-  const header = useRef(null);
+  const header = useRef<HTMLDivElement>(null);
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
-  const button = useRef(null);
+  const button = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (isActive) setIsActive(false);
@@ -58,7 +58,7 @@ export default function Header() {
                 height={32}
                 width={32}
                 src="/images/logo.jpg"
-                alt="Bettinas logo"
+                alt="Stephen logo"
                 priority
               />
             </Magnetic>
@@ -70,45 +70,33 @@ export default function Header() {
                     coded by
                   </div>
                   <div className="ease-custom-cubic px-1 transition-transform duration-500 group-hover:translate-x-[-65px]">
-                    Bettina
+                    Stephen
                   </div>
-
-                  <div
-                    className="ease-custom-cubic
-              translate-x-full transition-transform duration-500 group-hover:translate-x-[-65px]"
-                  >
-                    Sosa
+                  <div className="ease-custom-cubic translate-x-full transition-transform duration-500 group-hover:translate-x-[-65px]">
+                    Semren
                   </div>
                 </div>
               </>
             )}
           </Link>
         </div>
+
         {!isMobile() && (
           <div className="flex flex-1 items-center justify-between font-semibold">
-            <div className="group relative z-10 flex cursor-pointer flex-col p-3">
-              <div className="flex flex-col">
-                <Magnetic>
-                  <Link href={'/about'}>About</Link>
-                </Magnetic>
-                <Magnetic>
-                  <Link href={'/projects'}>Projects</Link>
-                </Magnetic>
-              </div>
-            </div>
-            <div className="group relative z-10 flex cursor-pointer flex-col p-3">
-              <div className="flex flex-col">
-                <Magnetic>
-                  <Link href={'/gallery'}>Gallery</Link>
-                </Magnetic>
-                <Magnetic>
-                  <Link href={'/blog'}>Blog</Link>
-                </Magnetic>
-              </div>
-            </div>
-            <div className="group relative z-10 flex cursor-pointer flex-col p-3">
+            {/* About & Projects links */}
+            <div className="group relative z-10 flex cursor-pointer space-x-8 p-3">
               <Magnetic>
-                <div className="flex">
+                <Link href={'/about'}>About</Link>
+              </Magnetic>
+              <Magnetic>
+                <Link href={'/projects'}>Projects</Link>
+              </Magnetic>
+            </div>
+
+            {/* Contact link */}
+            <div className="group relative z-10 flex cursor-pointer p-3">
+              <Magnetic>
+                <div className="flex items-center space-x-1">
                   <Link href={'/contact'}>Contact</Link>
                   <ArrowUpRight size={18} />
                 </div>
@@ -117,6 +105,8 @@ export default function Header() {
           </div>
         )}
       </div>
+
+      {/* Menu toggle button */}
       {!isMobile() && (
         <div ref={button} className="fixed right-0 z-20 scale-0 transform">
           <Menu />

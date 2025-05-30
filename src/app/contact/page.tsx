@@ -19,7 +19,7 @@ export default function Contact() {
   };
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('bettinasosarohl@gmail.com');
+    navigator.clipboard.writeText('stephensemren1011@gmail.com');
     setEmailCopied(true);
     setTimeout(() => setEmailCopied(false), 2000);
   };
@@ -37,22 +37,20 @@ export default function Contact() {
       <div className="flex min-h-screen w-full items-center justify-center pt-44 align-middle text-[8.6vw] xs:text-[5.6vw]">
         <div className="p-12 xs:w-1/2 xs:p-0">
           <div className="flex justify-between uppercase">
-            <p className="m-0">Bettina</p>
-            <p className="m-0">Sosa</p>
+            <p className="m-0">Stephen</p>
+            <p className="m-0">Semren</p>
           </div>
           <div className="flex justify-between uppercase">
-            <p className="m-0">software</p>
+            <p className="m-0">advertising</p>
             <p className="m-0">&</p>
           </div>
           <div className="flex justify-between uppercase">
-            <p className="m-0">design</p>
-            <p className="m-0">engineer</p>
+            <p className="m-0">marketing</p>
           </div>
           <div className="flex justify-between uppercase">
-            <p className="m-0">Ldn </p>
-            <Link href={'https://www.linkedin.com/in/bettina-sosa/'}>
+            <Link href={'https://www.linkedin.com/in/stephen-semren-597467366/'}>
               <TextDisperse setBackground={setBackground}>
-                <p>→Linkedin</p>
+                <p>LinkedIn</p>
               </TextDisperse>
             </Link>
           </div>
@@ -66,14 +64,8 @@ export default function Contact() {
               scrollToEmail();
             }}
           >
-            <p className="m-0">→Email</p>
+            <p className="m-0">Email</p>
           </TextDisperse>
-
-          <Link href={'https://github.com/bettinasosa'}>
-            <TextDisperse setBackground={setBackground}>
-              <p>→Github</p>
-            </TextDisperse>
-          </Link>
           <div
             ref={background}
             className={clsx(

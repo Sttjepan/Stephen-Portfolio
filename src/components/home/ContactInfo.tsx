@@ -39,17 +39,17 @@ export default function ContactInfo() {
       <div className="w-full bg-foreground pt-[150px] sm:max-w-[1800px]">
         <div className="relative border-b border-gray-600 pb-12 sm:mx-[100px]">
           <span className="flex items-center">
-            <div className="relative h-16 w-16 overflow-hidden rounded-full sm:h-[100px] sm:w-[100px]">
+            <div className="relative h-16 w-16 overflow-hidden rounded-full sm:h-[200px] sm:w-[200px]">
               <Image
                 fill
                 alt={'profile'}
-                src={`/images/profile2.jpg`}
+                src={`/images/profile.jpg`}
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <h2 className="ml-3 text-xl font-medium sm:text-[5vh]">
-              Let&apos;s work together!
+              Message Me :D
             </h2>
           </span>
           <motion.div
@@ -65,27 +65,25 @@ export default function ContactInfo() {
           </motion.div>
         </div>
         <div className="mt-6 flex gap-5 sm:mx-[100px]">
-          <RoundedButton>bettinasosarohl@gmail.com</RoundedButton>
+          <RoundedButton>stephensemren1011@gmail.com</RoundedButton>
         </div>
 
         <div className="mt-20 flex flex-col justify-between p-5 2xs:mt-52 sm:mx-[100px] sm:mt-48 sm:flex-row">
           <p className="min-w-screen mb-5 text-base sm:max-w-xs">
-            AI/LLM enthusiast | Cutting-edge tech advocate | Web3 builder |
-            Passionate about using technology to make the world a better place.
           </p>
           <div className="flex items-end gap-2">
             <span className="flex flex-col gap-3">
               <h3 className="m-0 cursor-default p-1 text-base font-light text-gray-500">
                 Version
               </h3>
-              <p className="relative m-0 cursor-pointer p-1">2024 © Edition</p>
+              <p className="relative m-0 cursor-pointer p-1">2025 © Edition</p>
             </span>
             <span className="flex flex-col gap-3">
               <h3 className="m-0 cursor-default p-1 text-base font-light text-gray-500">
                 Timezone
               </h3>
               <p className="relative m-0 cursor-pointer p-1">
-                {timeNow} UK (GMT+1)
+                {timeNow} ON (GMT-4)
               </p>
             </span>
           </div>
@@ -96,7 +94,7 @@ export default function ContactInfo() {
               </h3>
               <Magnetic>
                 <Link
-                  href="https://twitter.com/bettysrohl"
+                  href="https://x.com/5tjepann"
                   className={animatedUnderlineStyle}
                 >
                   Twitter
@@ -105,7 +103,7 @@ export default function ContactInfo() {
             </span>
             <Magnetic>
               <Link
-                href="https://github.com/bettinasosa"
+                href="https://github.com/Sttjepan"
                 className={animatedUnderlineStyle}
               >
                 Github
@@ -113,7 +111,7 @@ export default function ContactInfo() {
             </Magnetic>
             <Magnetic>
               <Link
-                href="https://github.com/bettinasosa"
+                href="https://www.linkedin.com/in/stephen-semren-597467366/"
                 className={animatedUnderlineStyle}
               >
                 Linkedin

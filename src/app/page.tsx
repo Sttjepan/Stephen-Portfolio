@@ -11,38 +11,34 @@ import Description from '@/components/home/Description/description';
 const slider1 = [
   {
     color: 'white',
-    src: 'stylesync/pca.png'
+    src: 'pa/astronaut.png'
   },
   {
     color: 'white',
-    src: 'stylesync/diagram.png'
+    src: 'pa/concept.png'
   },
   {
     color: '#21242b',
-    src: 'catapult-trading/dashboard.png'
+    src: 'pa/poster1.png'
   },
   {
     color: '#21242b',
-    src: 'm31/controller.jpg'
+    src: 'bltkq/controller.png'
   }
 ];
 const slider2 = [
   {
     color: '#d4e3ec',
-    src: 'm31/specs.png'
+    src: 'pa/poster3.png'
   },
   {
     color: '#9289BD',
-    src: 'axo/prototype.png'
+    src: 'pa/poster4.png'
   },
   {
     color: 'white',
-    src: 'm31/app.png'
+    src: 'pa/poster2.png'
   },
-  {
-    color: 'white',
-    src: 'stylesync/hero.svg'
-  }
 ];
 
 export default function Home() {

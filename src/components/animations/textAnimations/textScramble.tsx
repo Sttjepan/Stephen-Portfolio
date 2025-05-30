@@ -113,7 +113,7 @@ export function TextScramble() {
   return (
     <div>
       <div ref={textRef} className="text-scramble">
-        Creativity is My craft
+        “A delayed game is eventually good, but a rushed game is forever bad.”
       </div>
     </div>
   );
