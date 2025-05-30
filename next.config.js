@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
   images: {
     domains: [
       'i.scdn.co',
@@ -10,8 +9,6 @@ const nextConfig = {
       'miro.medium.com',
       'cdn-images-1.medium.com',
     ],
-    // keep default optimization enabled
-    unoptimized: false,
   },
 };
 
